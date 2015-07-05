@@ -1,0 +1,69 @@
+*.py[co]
+*.db
+*.db3
+*.sqlite3
+build
+VERSION.txt
+dist
+
+# Editor/IDE files
+*~
+*.ipr
+*.iws
+.idea/
+*.tmproj
+*.tmproject
+tmtags
+.*.sw[a-z]
+*.un~
+Session.vim
+.codeintel
+.project
+.pydevproject
+
+# Mac Files
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Ignore tags created by etags and ctags
+TAGS
+tags
+tags_sorted_by_file
+
+# Installer logs
+pip-log.txt
+*.log
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+#Translations
+*.mo
+
+local_settings.py
+*.wsgi
+
+#LocalFiles
+pylintrc
+.ropeproject/
+node_modules/
+
+
+#emacsfiles
+.py#
+.py~
+.html#
+.html~
+.js#
+.js~
+
+#java
+bin/
+.class
