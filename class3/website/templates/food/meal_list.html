@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Menu:</h1>
+    {% for meal_data in data %}
+        <ul>
+            <li><a href="{% url 'food:detail' pk=meal_data.meal.pk %}">{{ meal_data.meal.name }}</a></li>
+            <li>Rated: {{ meal_data.rating }}</li>
+            <li>{{ meal_data.reviews_count }} Reviews</li>
+            <li>Contains:</li>
+            {% for item in meal_data.meal.items.all %}
+                <ul>
+                    <li>{{ item.name }}</li>
+                </ul>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}

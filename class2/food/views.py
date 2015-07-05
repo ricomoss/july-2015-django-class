@@ -3,7 +3,7 @@ from django.views.generic import ListView, DetailView
 from food import models
 
 
-class MealView(ListView):
+class MealListView(ListView):
     model = models.Meal
 
 

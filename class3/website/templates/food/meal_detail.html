@@ -4,6 +4,9 @@
     <h1>Menu:</h1>
     <ul>
         <li>{{ object.name }} Contains:</li>
+        <li>Rated: {{ rating }}</li>
+        <li><a href="{% url 'common:review:index' meal_id=object.pk %}">{{ object.review_set.count }} Reviews</a></li>
+        <li>Contains:</li>
         {% for item in meal.items.all %}
             <ul>
                 <li>{{ item.name }}</li>

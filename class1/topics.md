@@ -12,7 +12,7 @@ Goals
 -----
 
  - Django project creation
- - Define a modular, expandable and intuitive project structure
+ - Define a modular, scalable and intuitive project structure
  - Setup place-holders for custom environment settings
 
 Tasks
