@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Menu:</h1>
+    <ul>
+        <li>{{ object.name }} Contains:</li>
+            {% for item in meal.items.all %}
+            <ul>
+                <li>{{ item.name }}</li>
+                <ul>
+                    <li>Portion (in grams): {{ item.portion_in_grams }}</li>
+                    <li>Calories: {{ item.calories }}</li>
+                    <li>Food Type: {{ item.food_type }}</li>
+                </ul>
+            </ul>
+            {% endfor %}
+    </ul>
+{% endblock %}

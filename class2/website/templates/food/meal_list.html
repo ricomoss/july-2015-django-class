@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Menu:</h1>
+    <ul>
+        {% for meal in object_list %}
+            <li><a href="{% url 'food:detail' pk=meal.pk %}">{{ meal.name }}</a> Contains:</li>
+                {% for item in meal.items.all %}
+                <ul>
+                    <li>{{ item.name }}</li>
+                </ul>
+                {% endfor %}
+        {% endfor %}
+    </ul>
+{% endblock %}
