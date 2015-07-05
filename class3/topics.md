@@ -21,5 +21,5 @@ Tasks
  - Update your field.html template to handle form errors.
  - Add a model in common called Review that will allow users to rate meals.
  - Modify the MealListView to include the average review rating.
- - Modify the MealDetailView to include a link to the ReviewListView, which links to the ReviewDetailView.  Create templates and routes for each.  (Use the generate_reviews management script to create some review data for testing.)
+ - Modify the MealDetailView to include a link to the ReviewListView, which contains the details of each review.  Create a template and route - create a specific namespace in the common/urls.py for reviews.  (Use the generate_reviews management script to create some review data for testing.)
  
