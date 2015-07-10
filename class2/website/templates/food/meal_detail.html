@@ -4,7 +4,7 @@
     <h1>Menu:</h1>
     <ul>
         <li>{{ object.name }} Contains:</li>
-        {% for item in meal.items.all %}
+        {% for item in object.items.all %}
             <ul>
                 <li>{{ item.name }}</li>
                 <ul>
