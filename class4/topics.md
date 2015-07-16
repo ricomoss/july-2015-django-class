@@ -1,26 +1,20 @@
-Class 3 Topics
+Class 4 Topics
 ==============
 
-The topics we'll be covering for class 3 revolve around Django's form validation.  We'll also go into more depth with customizing the ListView and DetailView created in class 2.
+The topics we'll be covering for class 4 revolve around Django's Formsets.
 
 Motivation
 ----------
 
-Using Django forms and CBVs provide functionality for validation and error handling.  There are natural methods to expand the validation functionality.
+Formsets allow multiple forms to display on a page to edit many models at once.
 
 Goals
 -----
 
- - Update the registration and login path to include Django's built-in form validation.
+ - Modify a Meal's Items.
 
 Tasks
 -----
 
- - Update the registration RegisterForm to accept a confirmation password and validate against it.  Also ensure the username is unique.
- - Update the registration POST to use the form and return errors when applicable.
- - Update your field.html template to handle form errors.
- - Add a model in common called Review that will allow users to rate meals.
- - Modify the MealListView to include the average review rating.
- - Modify the MealDetailView to include a link to the ReviewListView, which contains the details of each review.  Create a template and route - create a specific namespace in the common/urls.py for reviews.  (Use the generate_reviews management script to create some review data for testing.)
- - Create an ItemForm
- - Create a formset of ItemForm to use to generate a Meal
+ - Create a model formset for an Item -- set can_delete=True
+ - Create a View that will get a Meal and populate a formset with a Meal's items
