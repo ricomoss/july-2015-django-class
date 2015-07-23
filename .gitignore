@@ -55,7 +55,6 @@ pylintrc
 .ropeproject/
 node_modules/
 
-
 #emacsfiles
 .py#
 .py~
