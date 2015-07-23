@@ -12,7 +12,6 @@ class MealListView(ListView):
     model = models.Meal
 
     def get_context_data(self, **kwargs):
-        start = datetime.now()
         context = super().get_context_data(**kwargs)
         context['data'] = list()
         for meal in context['object_list']:
@@ -28,7 +27,6 @@ class MealDetailView(DetailView):
     model = models.Meal
 
     def get_context_data(self, **kwargs):
-        start = datetime.now()
         context = super().get_context_data(**kwargs)
         meal = context['object']
         context['rating'] = common_models.Review.average_rating(meal)
