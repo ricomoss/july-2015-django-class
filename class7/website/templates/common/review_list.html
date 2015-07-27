@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Review for {{ meal.name }}:</h1>
+    {% for review in object_list %}
+        <ul>
+            <li>{{ review.title }}</li>
+            <ul>
+                <li>Rated: {{ review.rating }}</li>
+                <li>User: {{ review.user.username }}</li>
+                <li>{{ review.content }}</li>
+            </ul>
+        </ul>
+    {% endfor %}
+{% endblock %}
