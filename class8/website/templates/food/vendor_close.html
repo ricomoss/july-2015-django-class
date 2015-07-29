@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Response: {{ response }}</h2>
+    {% if order_id %}
+        <h2>Order ID: {{ order_id }}</h2>
+    {% elif verification_id %}
+        <h2>Verification ID: {{ verification_id }}</h2>
+    {% elif transaction_id %}
+        <h2>Transaction ID: {{ transaction_id }}</h2>
+    {% else %}
+        <h2>Could not parse information</h2>
+    {% endif %}
+{% endblock %}
