@@ -1,7 +1,7 @@
 Class 7 Topics
 ==============
 
-The topics we'll be covering for class 6 involve a few use cases for decorators.
+The topics we'll be covering for class 7 involve a few use cases for decorators.
 
 Motivation
 ----------

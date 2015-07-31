@@ -1,4 +1,4 @@
-Class 7 Topics
+Class 8 Topics
 ==============
 
 The topics we'll be covering for class 6 involve a few use cases for decorators.
@@ -6,17 +6,22 @@ The topics we'll be covering for class 6 involve a few use cases for decorators.
 Motivation
 ----------
 
-Several advanced techniques will take advantage of design patterns using decorators.  Decorators can modify functionality of a method.  If your design paradigm involves repetitive techniques you may find decorators useful.
+When developing systems it is common to need several custom clients for a specific need.  There are several programming paradigms that can be used to solve this problem.  One of which is module-level inheritence paradigms.
 
 Goals
 -----
 
- - Create a decorator to take advantage of cache.
- - Create a decorator to allow multiple attempts before failure.
+ - Create a module for interfacing with "vendors".  Each vendor will have a unique handler for the API.
+ - Create a view, form and template for selecting a vendor and an action.
 
 Tasks
 -----
 
- - Create a file in common called "wrappers.py".
- - Create a decorator called "using_cache" in "wrappers.py" that will attempt to get values from cache before calling the function.
- - Create a decorator called "retry" in "wrappers.py" that will attempt to retry with gradually increasing wait time between attempts before ultimately failing.
+ - Create a module in food called "vendors".
+ - Create files in the new vendors module for each vendor and a base - "base.py", "flavor_of_the_month.py", "tasty_food_yum_yum.py", "we_got_yo_food.py".
+ - In the "base.py" file create a BaseVendor to define a basic interface with the "handler()" method doing the actual "work".
+ - In each of the vendor files create a vendor class that inherits from BaseVendor and implements all the interface methods but does not override the handler().
+ - Create an "options" constant in the vendors "__init__.py" file for the form to use.
+ - Create a view in the food app to handle a GET and POST request.
+ - Create a form in the food app to handle validation for the POST request in the new view.
+ - In the view accept the form action and use introspection to instantiate the correct vendor handler.
