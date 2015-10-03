@@ -58,11 +58,11 @@ Note:
 
 10.  Sync the database (follow the Django instructions).::
 
-        (owf)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py syncdb
+        (jdc)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py syncdb
         
 11.  Start the runserver.::
 
-        (owf)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py runserver
+        (jdc)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py runserver
         
 12.  Open your browser and see your site.::
 
@@ -109,7 +109,7 @@ Note:
 
 8.  Create your virtualenv (for Python 3)::
 
-        $ mkvirtualenv owf -p /usr/local/bin/python3
+        $ mkvirtualenv jdc -p /usr/local/bin/python3
 
 
 7.  Add the following to the end of the file **~/.virtualenvs/jdc/bin/postactivate**::
