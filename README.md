@@ -45,7 +45,7 @@ Note:
 
 7.  Add the following to the end of the file **~/.virtualenvs/jdc/bin/postactivate**::
 
-        export DJANGO_SETTINGS_MODULE=website.settings
+        export DJANGO_SETTINGS_MODULE=website.settings.dev
         export PYTHONPATH=~/Projects/july-2015-django-class/<class_folder>
 
 8.  Activate the virtualenv::
