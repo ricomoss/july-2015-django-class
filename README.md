@@ -123,7 +123,7 @@ Note:
 
 9.  Install the required Python libraries (ensure you're within the new virtual environment).::
 
-        (jdc)$ pip3 install -r ~/july-2015-django-class/requirements.pip
+        (jdc)$ pip3 install -r ~/Projects/july-2015-django-class/requirements.pip
 
 10.  Sync the database (follow the Django instructions).::
 
