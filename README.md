@@ -45,7 +45,7 @@ Note:
 
 7.  Add the following to the end of the file **~/.virtualenvs/jdc/bin/postactivate**::
 
-        export DJANGO_SETTINGS_MODULE=website.settings
+        export DJANGO_SETTINGS_MODULE=website.settings.dev
         export PYTHONPATH=~/Projects/july-2015-django-class/<class_folder>
 
 8.  Activate the virtualenv::
@@ -58,7 +58,7 @@ Note:
 
 10.  Sync the database (follow the Django instructions).::
 
-        (jdc)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py syncdb
+        (jdc)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py migrate
         
 11.  Start the runserver.::
 
@@ -127,7 +127,7 @@ Note:
 
 10.  Sync the database (follow the Django instructions).::
 
-        (jdc)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py syncdb
+        (jdc)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py migrate
         
 11.  Start the runserver.::
 
