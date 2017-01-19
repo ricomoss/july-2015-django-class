@@ -58,7 +58,7 @@ Note:
 
 10.  Sync the database (follow the Django instructions).::
 
-        (jdc)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py syncdb
+        (jdc)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py migrate
         
 11.  Start the runserver.::
 
@@ -127,7 +127,7 @@ Note:
 
 10.  Sync the database (follow the Django instructions).::
 
-        (jdc)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py syncdb
+        (jdc)$ python ~/Projects/july-2015-django-class/<class_folder>/manage.py migrate
         
 11.  Start the runserver.::
 
