@@ -1,6 +1,5 @@
 import random
 import itertools
-from optparse import make_option
 
 from fixtureless import Factory
 from django.core.management.base import BaseCommand
@@ -12,20 +11,18 @@ from food import models as food_models
 class Command(BaseCommand):
     help = 'Populate the local DB with review data.'
 
-    option_list = BaseCommand.option_list + (
-        make_option(
+    def add_arguments(self, parser):
+        parser.add_argument(
             '--review_count',
-            type='int',
             default=5,
             help='The number of reviews you want in your system. (default=50)',
-        ),
-        make_option(
+        )
+        parser.add_argument(
             '--clear_db',
             action='store_true',
             default=False,
             help='Clear the database to start fresh.',
-        ),
-    )
+        )
 
     REVIEW_TITLES = ['Bleh', 'Pass', 'Meh', 'Yummy', 'AMAZING!']
     REVIEW_CONTENTS = [

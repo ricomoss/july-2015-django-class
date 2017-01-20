@@ -1,6 +1,5 @@
 import random
 import itertools
-from optparse import make_option
 
 from fixtureless import Factory
 from django.core.management.base import BaseCommand
