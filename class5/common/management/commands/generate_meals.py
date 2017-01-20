@@ -11,27 +11,24 @@ from food import models as food_models
 class Command(BaseCommand):
     help = 'Populate the local DB with meal data.'
 
-    option_list = BaseCommand.option_list + (
-        make_option(
+    def add_arguments(self, parser):
+        parser.add_argument(
             '--meal_count',
-            type='int',
             default=5,
             help='The number of meals you want in your system. (default=5)',
-        ),
-        make_option(
+        )
+        parser.add_argument(
             '--item_count',
-            type='int',
             default=25,
             help='The number of food items you want in your system. '
                  '(default=25)',
-        ),
-        make_option(
+        )
+        parser.add_argument(
             '--clear_db',
             action='store_true',
             default=False,
             help='Clear the database to start fresh.',
-        ),
-    )
+        )
 
     MEAL_NAMES = ['Hamburger', 'Enchilada', 'Spaghetti', 'Burrito', 'Omelette']
     ITEM_NAMES = [
