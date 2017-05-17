@@ -2,7 +2,7 @@ import random
 import itertools
 from optparse import make_option
 
-from fixtureless import Factory
+from fixtureless.factory import create
 from django.core.management.base import BaseCommand
 
 from accounts import models as accounts_models
@@ -35,7 +35,6 @@ class Command(BaseCommand):
 
     def __init__(self):
         common_models.Review.objects.all().delete()
-        self.factory = Factory()
         super().__init__()
 
     def _generate_reviews(self, review_count):
@@ -48,7 +47,7 @@ class Command(BaseCommand):
                 'user': random.choice(accounts_models.User.objects.all()),
                 'meal': random.choice(food_models.Meal.objects.all()),
             })
-        self.factory.create(common_models.Review, initial_list)
+        create(common_models.Review, initial_list)
 
     def handle(self, *args, **options):
         if options['clear_db']:
