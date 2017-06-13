@@ -27,8 +27,8 @@ Note:
 
 3.  Install virtualenv and virtualenvwrapper::
 
-        $ pip install virtualenv
-        $ pip install virtualenvwrapper
+        $ sudo pip install virtualenv
+        $ sudo pip install virtualenvwrapper
 
 4.  Add the following to your **~/.bashrc** or **~/.zshrc** file::
 
