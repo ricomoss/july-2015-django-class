@@ -14,11 +14,13 @@ class Command(BaseCommand):
         parser.add_argument(
             '--meal_count',
             default=5,
+            type=int,
             help='The number of meals you want in your system. (default=5)',
         )
         parser.add_argument(
             '--item_count',
             default=25,
+            type=int,
             help='The number of food items you want in your system. '
                  '(default=25)',
         )

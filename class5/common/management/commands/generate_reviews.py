@@ -15,6 +15,7 @@ class Command(BaseCommand):
         parser.add_argument(
             '--review_count',
             default=5,
+            type=int,
             help='The number of reviews you want in your system. (default=50)',
         )
         parser.add_argument(

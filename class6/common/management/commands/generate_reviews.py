@@ -16,8 +16,8 @@ class Command(BaseCommand):
     option_list = BaseCommand.option_list + (
         make_option(
             '--review_count',
-            type='int',
             default=5,
+            type=int,
             help='The number of reviews you want in your system. (default=50)',
         ),
         make_option(
