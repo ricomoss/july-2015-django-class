@@ -1,7 +1,6 @@
 from website.settings.base import *
 
 DEBUG = False
-TEMPLATE_DEBUG = DEBUG
 
 DATABASES = {
     'default': {
@@ -10,6 +9,8 @@ DATABASES = {
         'USER': 'website_db_user',
     }
 }
+
+TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
 
 try:
