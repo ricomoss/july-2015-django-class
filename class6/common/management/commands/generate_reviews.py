@@ -9,7 +9,6 @@ from accounts import models as accounts_models
 from common import models as common_models
 from food import models as food_models
 
-
 class Command(BaseCommand):
     help = 'Populate the local DB with review data.'
 
